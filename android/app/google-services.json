@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1021055301260",
+    "project_id": "flocknest-fb594",
+    "storage_bucket": "flocknest-fb594.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021055301260:android:a510dcf91e7ba041062da9",
+        "android_client_info": {
+          "package_name": "com.example.hack_odisha_two"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021055301260-b81kf58c2d4l2unl7s0s817vkc5rit3l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hack_odisha_two",
+            "certificate_hash": "eb378e99fb8697a2479e1ba4e42bd8e5a9169cc4"
+          }
+        },
+        {
+          "client_id": "1021055301260-klo7j53cke2t44f1ir1edndvmpml37sh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5VLpsFnWurP-9EvN9Fa5w5PF8mNVPdXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021055301260-klo7j53cke2t44f1ir1edndvmpml37sh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1021055301260-f44sidmk8m7rqm9id97rk46regg0nf8i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.hackOdishaTwo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

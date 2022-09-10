@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>588515024656-e5lulce5at5662eivpek6co68futsib3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.588515024656-e5lulce5at5662eivpek6co68futsib3</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA4-2yrmurn21JAmTLHUcyKAFrUHH11hKU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>588515024656</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.hackOdishaTwo</string>
+	<key>PROJECT_ID</key>
+	<string>flocknest-c96b4</string>
+	<key>STORAGE_BUCKET</key>
+	<string>flocknest-c96b4.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:588515024656:ios:fa680286c08386b0558f95</string>
+</dict>
+</plist>
