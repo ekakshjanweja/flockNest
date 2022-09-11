@@ -4,6 +4,7 @@ import 'package:hack_odisha_two/features/atendee/atendee_screen.dart';
 import 'package:hack_odisha_two/features/authentication/screens/login_screen.dart';
 import 'package:hack_odisha_two/features/authentication/screens/signup_screen.dart';
 import 'package:hack_odisha_two/features/authentication/screens/user_info_screen.dart';
+import 'package:hack_odisha_two/features/event_setup/screens/event_screen.dart';
 import 'package:hack_odisha_two/features/event_setup/screens/host_screen.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {

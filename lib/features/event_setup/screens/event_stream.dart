@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:hack_odisha_two/constants/custom_colors.dart';
 import 'package:hack_odisha_two/constants/custom_text.dart';
+import 'package:hack_odisha_two/features/event_setup/screens/event_screen.dart';
 
 class EventStream extends StatelessWidget {
   const EventStream({Key? key}) : super(key: key);
@@ -31,39 +32,54 @@ class EventStream extends StatelessWidget {
               children: snapshot.data!.docs.map((DocumentSnapshot document) {
                 Map<String, dynamic> data =
                     document.data()! as Map<String, dynamic>;
-                return Container(
-                  padding: EdgeInsets.symmetric(
-                    vertical: MediaQuery.of(context).size.height * 0.02,
-                    horizontal: MediaQuery.of(context).size.width * 0.01,
-                  ),
-                  margin: EdgeInsets.symmetric(
-                    vertical: MediaQuery.of(context).size.height * 0.03,
-                    horizontal: MediaQuery.of(context).size.width * 0.03,
-                  ),
-                  decoration: BoxDecoration(
-                    color: primaryColor.withOpacity(0.3),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: ListTile(
-                    title: Text(
-                      data['eventName'],
-                      style: CustomTextClass.h3(context, textColor),
+                return InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: ((context) => EventScreen(
+                              eventName: data['eventName'],
+                              eventId: data['eventId'],
+                              eventLocation: data['eventLocation'],
+                              imageUrl: data['eventLogo'],
+                            )),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    padding: EdgeInsets.symmetric(
+                      vertical: MediaQuery.of(context).size.height * 0.02,
+                      horizontal: MediaQuery.of(context).size.width * 0.05,
                     ),
-                    subtitle: Text(
-                      data['eventId'],
-                      style: CustomTextClass.h3(context, textColor),
+                    margin: EdgeInsets.symmetric(
+                      vertical: MediaQuery.of(context).size.height * 0.03,
+                      horizontal: MediaQuery.of(context).size.width * 0.03,
                     ),
-                    trailing: Column(
-                      children: [
-                        const Icon(Icons.location_on),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          data['eventLocation'],
-                          style: CustomTextClass.h3(context, textColor),
-                        ),
-                      ],
+                    decoration: BoxDecoration(
+                      color: primaryColor.withOpacity(0.3),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: ListTile(
+                      title: Text(
+                        data['eventName'],
+                        style: CustomTextClass.h3(context, textColor),
+                      ),
+                      subtitle: Text(
+                        data['eventId'],
+                        style: CustomTextClass.h3(context, textColor),
+                      ),
+                      trailing: Column(
+                        children: [
+                          const Icon(Icons.location_on),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            data['eventLocation'],
+                            style: CustomTextClass.h3(context, textColor),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );

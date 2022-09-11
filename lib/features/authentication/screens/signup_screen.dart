@@ -1,22 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hack_odisha_two/common/widgets/custom_button.dart';
 import 'package:hack_odisha_two/constants/custom_text.dart';
+import 'package:hack_odisha_two/features/authentication/controllers/auth_controller.dart';
 import 'package:hack_odisha_two/features/authentication/screens/login_screen.dart';
 
 import '../../../constants/custom_colors.dart';
 
-class SignupScreen extends StatelessWidget {
+class SignupScreen extends ConsumerWidget {
   static const routeName = '/signup-screen';
   const SignupScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     //Text Editing Controller
 
     TextEditingController _emailController = TextEditingController();
     TextEditingController _passwordController = TextEditingController();
+
+    //Login With Google
+
+    Future<void> loginWithGoogle() async {
+      ref.read(authControllerProvider).signInWithGoogle(context);
+    }
 
     return Scaffold(
       backgroundColor: backgroundColor,
@@ -136,7 +144,9 @@ class SignupScreen extends StatelessWidget {
                         //Google
 
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            loginWithGoogle();
+                          },
                           icon: FaIcon(
                             FontAwesomeIcons.google,
                             size: MediaQuery.of(context).size.height * 0.04,
