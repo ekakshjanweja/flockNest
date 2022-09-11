@@ -37,7 +37,7 @@ class MyApp extends ConsumerWidget {
       ),
       home: ref.watch(userDataAuthProvider).when(
             data: (user) {
-              if (user == null) {
+              if (user != null) {
                 return const UserInfoScreen();
               } else {
                 return const LoginScreen();

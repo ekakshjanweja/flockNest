@@ -57,7 +57,7 @@ class HostScreen extends ConsumerWidget {
                     style: CustomTextClass.bodyText(context, textColor),
                     decoration: const InputDecoration(
                       hintText: 'Event Name',
-                      prefixIcon: Icon(Icons.account_circle_outlined),
+                      prefixIcon: Icon(Icons.mail_outline),
                     ),
                   ),
                 ),
@@ -76,7 +76,7 @@ class HostScreen extends ConsumerWidget {
                     style: CustomTextClass.bodyText(context, textColor),
                     decoration: const InputDecoration(
                       hintText: 'Event Id',
-                      prefixIcon: Icon(Icons.account_circle_outlined),
+                      prefixIcon: Icon(Icons.bubble_chart),
                     ),
                   ),
                 ),
@@ -95,7 +95,7 @@ class HostScreen extends ConsumerWidget {
                     style: CustomTextClass.bodyText(context, textColor),
                     decoration: const InputDecoration(
                       hintText: 'Event Location',
-                      prefixIcon: Icon(Icons.account_circle_outlined),
+                      prefixIcon: Icon(Icons.location_on),
                     ),
                   ),
                 ),

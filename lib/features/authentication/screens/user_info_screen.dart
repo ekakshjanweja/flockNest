@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hack_odisha_two/common/widgets/custom_button.dart';
 import 'package:hack_odisha_two/constants/custom_colors.dart';
+import 'package:hack_odisha_two/features/atendee/atendee_screen.dart';
 import 'package:hack_odisha_two/features/authentication/controllers/auth_controller.dart';
 import 'package:hack_odisha_two/features/event_setup/screens/host_screen.dart';
 
@@ -160,7 +161,7 @@ class _UserInfoScreenState extends ConsumerState<UserInfoScreen> {
                       width: MediaQuery.of(context).size.width * 0.35,
                       child: TextButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, HostScreen.routeName);
+                          Navigator.pushNamed(context, AtendeeScreen.routeName);
                         },
                         style: TextButton.styleFrom(
                           backgroundColor: primaryColor.withOpacity(0.5),
